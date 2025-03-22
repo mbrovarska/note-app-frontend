@@ -1,18 +1,13 @@
 
-import './App.css'
-import { Button, HStack } from "@chakra-ui/react"
+import './App.css';
+import { Routes, Route } from "react-router";
+import SignUpPage from "./pages/sign-up";
 
-function App() {
-
-
+const App: React.FC = () => {
   return (
-    <>
-    
-      <HStack>
-      <Button>Click me</Button>
-      <Button>Click me</Button>
-    </HStack>
-    </>
+    <Routes>
+      <Route path="/" element={<SignUpPage/>}/>
+    </Routes>
   )
 }
 
