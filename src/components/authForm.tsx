@@ -21,11 +21,12 @@ const AuthForm: React.FC<FormProps> = (props) => {
         },
       })
       return (
-        <Flex bg="gray.100" align="center" justify="center" h="100vh" direction="column">
+        <Flex bg="white" align="center" justify="center" h="100vh" direction="column">
+            <Box bg="white" p={6} rounded="md"  w="50vh"  borderRadius="md" 
+                borderColor="grey200" borderWidth="1px">
                 <Image src={Logo}/>
-                <Text>Welcome to Notes</Text>
-                <Text>{props.subtitle}</Text>
-            <Box bg="white" p={6} rounded="md">
+                <Text fontSize="textxl" fontWeight={"bold"}>Welcome to Notes</Text>
+                <Text fontSize="textlg" fontWeight={"semibold"}>{props.subtitle}</Text>
             <form onSubmit={formik.handleSubmit}>
               <VStack spacing={4} align="flex-start">
               <FormField id="username"
@@ -33,7 +34,8 @@ const AuthForm: React.FC<FormProps> = (props) => {
                           type="text"
                           onChange={formik.handleChange}
                           value={formik.values.username}
-                          label="Username"               />
+                          label="Username"   
+                                />
 
                 <FormField id="email"
                           name="email"

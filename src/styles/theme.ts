@@ -1,7 +1,24 @@
 import { extendTheme } from "@chakra-ui/react";
 import type { StyleFunctionProps } from '@chakra-ui/styled-system';
 
-const textTheme = extendTheme({
+const customConfigTheme  = extendTheme({
+    theme: {
+      fonts: {
+        text: { value: "inter, sans-serif" },
+      },
+      fontSizes: {
+        textxl: { value: "24px" },
+        textlg: { value: "20px" },
+        textmd: { value: "16px" },
+        textsm: { value: "14px" },
+        textxs: { value: "12px" },
+      },
+      fontWeights: {
+        bold: { value: "700" },
+        semibold: { value: "500" },
+        medium: { value: "400" },
+        regular: { value: "200" },
+      },
       colors: {
             text: {
                   black900: "0E121B",
@@ -63,8 +80,37 @@ const textTheme = extendTheme({
                 colorScheme: 'green', // default is gray
               },
             },
-          },
-
+      },
+      spacing: {
+        "sp0": { value: "0px" },
+        "sp025": { value: "2px" },
+        "sp050": { value: "4px" },
+        "sp075": { value: "6px" },
+        "sp100": { value: "8px" },
+        "sp150": { value: "12px" },
+        "sp200": { value: "16px" },
+        "sp250": { value: "20px" },
+        "sp300": { value: "24px" },
+        "sp400": { value: "32px" },
+        "sp500": { value: "40px" },
+        "sp600": { value: "48px" },
+        "sp800": { value: "64px" },
+        "sp1000": { value: "80px" },
+        // "144": { value: "36rem" },
+      },
+      redius: {
+        "r0": { value: "0px" },
+        "r4": { value: "4px" },
+        "r6": { value: "6px" },
+        "r8": { value: "8px" },
+        "r10": { value: "10px" },
+        "r12": { value: "12px" },
+        "r16": { value: "16px" },
+        "r20": { value: "20px" },
+        "r24": { value: "24px" },
+        "rfull": { value: "999px" },
+      }
+    }
 })
 
-export default textTheme;
+export default customConfigTheme;
